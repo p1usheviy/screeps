@@ -1,14 +1,14 @@
 const counts = [
     ['harvester', 1],
     ['fixer', 0],
-    ['builder', 2],
+    ['builder', 4],
     ['upgrader', 2],
-    ['attacker', 0]
+    ['attacker', 1]
 ];
 
 const parts = [WORK,WORK,CARRY,CARRY,MOVE,MOVE];
 const parts_min = [WORK,CARRY,MOVE];
-const parts_attacker = [ATTACK,ATTACK,MOVE,MOVE];
+const parts_attacker = [CLAIM,MOVE];
 
 
 function spawning() {
