@@ -13,7 +13,7 @@ var get_store = require('storing');
 module.exports.loop = function () {
 
     cleaning();
-    spawning();
+    spawning(Game.spawns.Spawn1);
     towering();
     
     var sources = Game.rooms.W58S16.find(FIND_SOURCES); //console.log(sources.length);

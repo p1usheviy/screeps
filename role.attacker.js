@@ -4,8 +4,9 @@ var roleAttacker = {
 
     run: function(creep, source) {
         
-        var cont = Game.rooms.W58S17.controller;
-        if(creep.reserveController(cont) == ERR_NOT_IN_RANGE) { action.moveTo(creep, cont, '#ff0000'); }
+        var cont = creep.room.controller;
+        if (cont.my) { action.moveTo(creep, Game.flags.FlagA, '#ff0000'); }
+        else { if(creep.reserveController(cont) == ERR_NOT_IN_RANGE) { action.moveTo(creep, cont, '#ff0000'); } }
         return;
         
         var closestHostile = creep.pos.findClosestByRange(FIND_HOSTILE_CREEPS);
