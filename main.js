@@ -5,7 +5,8 @@ var roleFixer = require('role.fixer');
 var roleAttacker = require('role.attacker');
 
 var cleaning = require('cleaning');
-var spawning = require('spawning');
+var spawning = require('spawn');
+var renewing = require('spawn');
 var towering = require('tower');
 var get_store = require('storing');
 
@@ -14,6 +15,7 @@ module.exports.loop = function () {
 
     cleaning();
     spawning(Game.spawns.Spawn1);
+    renewing(Game.spawns.Spawn1);
     towering();
     
     var sources = Game.rooms.W58S16.find(FIND_SOURCES); //console.log(sources.length);

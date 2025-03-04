@@ -28,9 +28,6 @@ function spawning(spawn) {
                 }
             }
         }
-        
-        let cr = spawn.pos.findInRange(FIND_MY_CREEPS, 1);
-        console.log(cr);
     }
     else { 
         var spawningCreep = Game.creeps[spawn.spawning.name];
@@ -38,4 +35,14 @@ function spawning(spawn) {
     }
 }
 
+function renewing(spawn) {
+        
+    let creeps = spawn.pos.findInRange(FIND_MY_CREEPS, 1);
+    if (creeps.length) {
+        creep = creeps[0];
+        if (creep.ticksToLive < 1400) { spawn.renewCreep(creep); }
+    }
+}
+
 module.exports = spawning;
+module.exports = renewing;
