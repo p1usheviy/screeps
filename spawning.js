@@ -1,9 +1,9 @@
 const counts = [
     ['harvester', 1],
     ['fixer', 0],
-    ['builder', 4],
+    ['builder', 3],
     ['upgrader', 2],
-    ['attacker', 1]
+    ['attacker', 0]
 ];
 
 const parts = [WORK,WORK,CARRY,CARRY,MOVE,MOVE];
