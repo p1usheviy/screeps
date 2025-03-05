@@ -5,8 +5,7 @@ var roleFixer = require('role.fixer');
 var roleAttacker = require('role.attacker');
 
 var cleaning = require('cleaning');
-var spawning = require('spawn');
-var renewing = require('spawn');
+const { spawning, renewing } = require('spawn');
 var towering = require('tower');
 var get_store = require('storing');
 
