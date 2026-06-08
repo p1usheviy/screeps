@@ -11,10 +11,10 @@ var get_store = require('storing');
 
 
 module.exports.loop = function () {
-
+    // Ups
     cleaning();
     spawning(Game.spawns.Spawn1);
-    renewing(Game.spawns.Spawn1);
+    //renewing(Game.spawns.Spawn1);
     towering();
     
     var sources = Game.rooms.W58S16.find(FIND_SOURCES); //console.log(sources.length);
@@ -26,7 +26,8 @@ module.exports.loop = function () {
         var creep = Game.creeps[name];
         if(creep.memory.role == 'harvester') {
             if (store) { roleHarvester.run(creep, sources[0], store); }
-            else { roleFixer.run(creep, sources[0]); }
+            else if (constrs.length > 0) { roleBuilder.run(creep); }
+            else { roleUpgrader.run(creep, sources[0]); }
         }
         if(creep.memory.role == 'upgrader') {
             roleUpgrader.run(creep, sources[1]);
